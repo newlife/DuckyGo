@@ -1,15 +1,13 @@
 package main
 
 import (
-	"DuckyGo/conf"
+	"DuckyGo/model"
 	"DuckyGo/server"
 )
 
 func main() {
-	// 从配置文件读取配置
-	conf.Init()
-
 	// 装载路由
+	model.Database()
 	r := server.NewRouter()
 
 	// 运行 起在8000端口
